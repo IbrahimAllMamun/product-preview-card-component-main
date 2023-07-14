@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: auto;
+  background-color: var(--cream);
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: var(--dark-grayish-blue);
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 10px 0;
+  box-shadow: 3px 2px 100px 3px rgba(75, 73, 73, 0.47);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card {
+  height: 100%;
+  text-align: center;
+  color: var(--white);
+}
+picture {
+  display: flex;
+}
+.card img {
+  width: 100%;
+}
+
+
+.summary {
+  padding: 40px 40px;
+}
+
+.summary h1 {
+  margin: 30px 0 20px 0;
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+}
+
+.summary > span {
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+}
+
+.price:nth-child(1) {
+  font-size: 4rem;
+  font-family: 'Fraunces', serif;
+  color: var(--dark-cyan);
+}
+
+.price:nth-child(2) {
+  margin: 20px;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+
+
+button {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  align-self: center;
+  padding: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  border: 0;
+  border-radius: 15px;
+  transition: background .5s ease;
+  margin-top: 25px;
+}
+
+button:hover {
+  background: hsl(158, 35%, 25%);
+}
+
+button:active {
+  background: hsl(158, 35%, 25%);
+}
+
+button img {
+  margin: 0 5px;
+}
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 375px) {
+  .container{
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 750px) {
+  .container{
+    max-width: 750px;
+    flex-direction: row;
+  }
+
+  .card {
+    width: 50%;
+    height: 100%;
+  }
+
+  .summary {
+    width: 50%;
+  }
+}
